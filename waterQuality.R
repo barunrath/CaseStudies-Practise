@@ -7,13 +7,12 @@ library(stringr)
 library(lubridate)
 
 # Read in the dataset
-water <- read_csv('http://594442.youcanlearnit.net/austinwater.csv')
-
+#water <- read_csv('http://594442.youcanlearnit.net/austinwater.csv')
+water<-read_csv('original data/austinwater.csv')
 # Let's take a look at what we have
 glimpse(water)
 
-# First, let's get rid of a lot of columns that we don't needI'm going to do that by building a new tibble with just
-# siteName, siteType, parameter, result and unit
+# First, let's get rid of a lot of columns that we don't need I'm going to do that by building a new tibble with just siteName, siteType, parameter, result and unit
 
 water <- tibble('siteName'=water$SITE_NAME,
                 'siteType'=water$SITE_TYPE,
@@ -186,5 +185,5 @@ filtered_water_wide
 
 # and i'll just clean up those column names
 colnames(filtered_water_wide)[4] <- 'pH'
-colnames(filtered_water_wide)[4] <- 'temperature'
+colnames(filtered_water_wide)[5] <- 'temperature'
 
