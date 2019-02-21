@@ -12,8 +12,7 @@ water <- read_csv('http://594442.youcanlearnit.net/austinwater.csv')
 # Let's take a look at what we have
 glimpse(water)
 
-# First, let's get rid of a lot of columns that we don't need
-# I'm going to do that by building a new tibble with just
+# First, let's get rid of a lot of columns that we don't needI'm going to do that by building a new tibble with just
 # siteName, siteType, parameter, result and unit
 
 water <- tibble('siteName'=water$SITE_NAME,

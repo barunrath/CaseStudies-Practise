@@ -1,2 +1,3 @@
 # CaseStudies-Practise
-Intended to be a repository for practise work
+Intended to be a repository for practise work.
+
